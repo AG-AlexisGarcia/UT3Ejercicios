@@ -12,26 +12,57 @@
 <body>
 
   <main>
-    <figure>
     <h1>Unidad 3: Reproductores y Medios Adaptativos</h1>
 
     <section class="video-section">
       <h2>Videoclase Interactiva</h2>
 
-      <video controls width="640" preload="metadata">
-        <source src="clase.mp4" type="video/mp4">
-        Tu navegador no soporta vídeo HTML5.
-      </video>
+      <figure class="video-figure">
+        <video controls preload="metadata" poster="img/poster-video.jpg" width="640" height="360">
+          <!-- Fuentes multimedia de diferente compresión para ahorrar datos -->
+          <source src="clase.webm" type="video/webm">
+          <source src="clase.mp4" type="video/mp4">
+          <!-- Subtítulos accesibles obligatorios en formato WebVTT -->
+          <track kind="subtitles" src="subtitulos-es.vtt" srclang="es" label="Español" default>
+          <!-- Mensaje de reserva (Fallback) con enlace de descarga -->
+          <p>
+            Tu navegador no soporta vídeo HTML5. 
+            Puedes <a href="clase.mp4">descargar el archivo de vídeo en formato MP4</a>.
+          </p>
+        </video>
+        <figcaption>
+          <strong>Vídeo 3.1:</strong> Videoclase interactiva con subtítulos sincronizados en formato WebVTT.
+        </figcaption>
+      </figure>
     </section>
 
-    <figcaption>Esquema de arquitectura web</figcaption>
-    </figure>
-
-
-    <section class="image-section">
+    
+   <section class="image-section">
       <h2>Esquema de Arquitectura Web</h2>
-      <!-- El alumnado debe envolver en <figure>/<figcaption> y sustituir por <picture> con AVIF/WebP y srcset -->
-      <img src="esquema-desktop.jpg" alt="Esquema de red">
+      
+      <figure class="picture-figure">
+        <picture>
+          <!-- Dirección de Arte + Formatos AVIF/WebP para Escritorio (>= 960px) -->
+          <source media="(min-width: 960px)" srcset="esquema-desktop.avif" type="image/avif">
+          <source media="(min-width: 960px)" srcset="esquema-desktop.webp" type="image/webp">
+          <source media="(min-width: 960px)" srcset="esquema-desktop.jpg" type="image/jpeg">
+
+          <!-- Dirección de Arte + Formatos AVIF/WebP para Móviles (< 960px) -->
+          <source srcset="esquema-mobile.avif" type="image/avif">
+          <source srcset="esquema-mobile.webp" type="image/webp">
+
+          <!-- Etiqueta <img> obligatoria de reserva y renderizado -->
+          <img src="esquema-desktop.jpg" 
+               alt="Esquema detallado de la arquitectura de red cliente-servidor y flujo de peticiones HTTP" 
+               width="1200" 
+               height="600" 
+               loading="lazy">
+        </picture>
+        <figcaption>
+          <strong>Figura 3.1:</strong> Esquema de arquitectura web adaptativa. 
+          Distribuido bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/" rel="license external">CC BY 4.0</a>.
+        </figcaption>
+      </figure>
     </section>
   </main>
 

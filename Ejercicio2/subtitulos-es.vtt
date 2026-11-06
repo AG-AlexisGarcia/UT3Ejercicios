@@ -1,0 +1,29 @@
+WEBVTT - Archivo de subtítulos de la Videoclase Interactiva
+
+1
+00:00:01.000 --> 00:00:04.500
+Bienvenidos a la videoclase interactiva sobre arquitectura web y medios adaptativos.
+
+2
+00:00:05.000 --> 00:00:09.200
+En esta sesión analizaremos cómo optimizar el consumo de datos móviles mediante formatos de alta compresión.
+
+3
+00:00:09.800 --> 00:00:14.000 align:center line:85%
+<v Regino>Recordad que incluir subtítulos sincronizados es obligatorio para cumplir el nivel WCAG 2.1 AA.</v>
+
+4
+00:00:14.500 --> 00:00:19.000
+El atributo preload con valor metadata evita que el navegador descargue todo el vídeo al cargar la página.
+
+5
+00:00:19.500 --> 00:00:24.200
+A continuación, pasaremos a revisar el esquema gráfico de red utilizando el contenedor picture.
+
+6
+00:00:24.800 --> 00:00:29.500 align:center line:85%
+<v Regino>Priorizad siempre formatos modernos como AVIF y WebP frente al JPEG tradicional para ahorrar ancho de banda.</v>
+
+7
+00:00:30.000 --> 00:00:34.000
+No olvidéis incluir siempre la etiqueta img interior como elemento obligatorio de reserva y renderizado.
